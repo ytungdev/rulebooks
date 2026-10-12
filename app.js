@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ? `
                 <div class="rule-section">
                 <h4>📦 Components</h4>
-                <ul class="components-grid">
+                <ul class="rule-list">
                     ${rules.components.map((item) => `<li>${item}</li>`).join("")}
                 </ul>
                 </div>
@@ -216,12 +216,12 @@ document.addEventListener("DOMContentLoaded", () => {
         <button class="copy-btn" onclick="copyLink('${currentUrl}', this)">🔗 Copy Link</button>
         </div>
 
-        ${resourcesHtml}
         ${componentsHtml}
         ${setupHtml}
         ${procedureHtml}
         ${endGameHtml}
         ${notesHtml}
+        ${resourcesHtml}
         `;
     }
 
