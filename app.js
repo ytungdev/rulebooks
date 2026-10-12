@@ -40,31 +40,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
         galleryGrid.innerHTML = list
             .map((game) => {
-                // Image cover with graceful fallback to icon
                 const coverHtml = game.cover
                     ? `
-                <div class="card-cover-wrap">
-                <img 
-                    src="${game.cover}" 
-                    alt="${game.title} cover" 
-                    class="card-cover" 
-                    loading="lazy" 
-                    onerror="this.parentElement.outerHTML='<div class=\\'card-icon\\'>${game.icon || '🎲'}</div>'"
-                />
-                </div>
-            `
+            <div class="card-cover-wrap">
+              <img 
+                src="${game.cover}" 
+                alt="${game.title} cover" 
+                class="card-cover" 
+                loading="lazy" 
+                onerror="console.error('Failed to load image at:', this.src); this.parentElement.innerHTML='<div class=\\'card-icon\\'>${game.icon || '🎲'}</div>';"
+              />
+            </div>
+          `
                     : `<div class="card-icon">${game.icon || "🎲"}</div>`;
 
                 return `
-            <article class="gallery-card" onclick="loadGameRules('${game.id}')">
-                ${coverHtml}
-                <div class="card-title">${game.title}</div>
-                <div class="card-meta">👥 ${game.players} | ⏱️ ${game.playTime} | ⚖️ ${game.weight || "Medium"}</div>
-                <div class="tags">
-                ${game.tags.map((t) => `<span class="tag">${t}</span>`).join("")}
-                </div>
-            </article>
-            `;
+          <article class="gallery-card" onclick="loadGameRules('${game.id}')">
+            ${coverHtml}
+            <div class="card-title">${game.title}</div>
+            <div class="card-meta">👥 ${game.players} | ⏱️ ${game.playTime} | ⚖️ ${game.weight || "Medium"}</div>
+            <div class="tags">
+              ${game.tags.map((t) => `<span class="tag">${t}</span>`).join("")}
+            </div>
+          </article>
+        `;
             })
             .join("");
     }
@@ -147,7 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
       `
             : "";
 
-        
+
         // Notes section
         const notesContent = rules.notes || rules.proTips;
         const notesHtml = notesContent
