@@ -124,14 +124,34 @@ document.addEventListener("DOMContentLoaded", () => {
         // Components section
         const componentsHtml = rules.components && rules.components.length > 0
             ? `
-        <div class="rule-section">
-          <h4>📦 Components</h4>
-          <ul class="components-grid">
-            ${rules.components.map((item) => `<li>${item}</li>`).join("")}
-          </ul>
-        </div>
-      `
+                <div class="rule-section">
+                <h4>📦 Components</h4>
+                <ul class="components-grid">
+                    ${rules.components.map((item) => `<li>${item}</li>`).join("")}
+                </ul>
+                </div>
+            `
             : "";
+
+        // Setup section: rendered as an ordered list of actions
+        let setupHtml = "";
+        if (Array.isArray(rules.setup)) {
+            setupHtml = `
+                <div class="rule-section">
+                <h4>⚙️ Setup Checklist</h4>
+                <ol class="setup-list">
+                    ${rules.setup.map((step) => `<li>${step}</li>`).join("")}
+                </ol>
+                </div>
+            `;
+        } else if (rules.setup) {
+            setupHtml = `
+                <div class="rule-section">
+                <h4>⚙️ Setup Summary</h4>
+                <p style="white-space: pre-line;">${rules.setup}</p>
+                </div>
+            `;
+        }
 
         // Procedure section
         const procedureSteps = rules.procedure || rules.turnOrder || [];
@@ -146,17 +166,31 @@ document.addEventListener("DOMContentLoaded", () => {
       `
             : "";
 
+        // End Game & Scoring section
+        let endGameHtml = "";
+        if (Array.isArray(rules.endGame)) {
+            endGameHtml = `
+        <div class="rule-section">
+          <h4>🏁 End Game & Scoring</h4>
+          <ul class="endgame-list">
+            ${rules.endGame.map((point) => `<li>${point}</li>`).join("")}
+          </ul>
+        </div>
+      `;
+        }
 
         // Notes section
-        const notesContent = rules.notes || rules.proTips;
-        const notesHtml = notesContent
-            ? `
-        <div class="notes-box">
-          <strong>📝 Notes:</strong><br>
-          <span style="white-space: pre-line;">${notesContent}</span>
-        </div>
-      `
-            : "";
+        let notesHtml = "";
+        if (Array.isArray(rules.notes) && rules.notes.length > 0) {
+            notesHtml = `
+                <div class="notes-box">
+                <strong>📝 Notes:</strong>
+                <ul class="notes-list">
+                    ${rules.notes.map((note) => `<li>${note}</li>`).join("")}
+                </ul>
+                </div>
+            `;
+        } 
 
         modalContent.innerHTML = `
       ${modalCoverHtml}
@@ -168,19 +202,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       ${resourcesHtml}
       ${componentsHtml}
-
-      <div class="rule-section">
-        <h4>⚙️ Setup Summary</h4>
-        <p style="white-space: pre-line;">${rules.setup}</p>
-      </div>
-
+      ${setupHtml}
       ${procedureHtml}
-
-      <div class="rule-section">
-        <h4>🏁 End Game & Scoring</h4>
-        <p style="white-space: pre-line;">${endGameText}</p>
-      </div>
-
+      ${endGameHtml}
       ${notesHtml}
     `;
     }

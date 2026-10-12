@@ -112,6 +112,23 @@ header p {
     font-weight: 600;
 }
 
+/* Setup Ordered Action List */
+.setup-list {
+    padding-left: 1.3rem;
+    margin-top: 0.4rem;
+}
+
+.setup-list li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    color: #334155;
+}
+
+.setup-list li::marker {
+    font-weight: 700;
+    color: var(--primary);
+}
+
 /* Gallery Card Image Cover */
 .card-cover-wrap {
     width: 100%;
@@ -238,19 +255,56 @@ header p {
     margin-bottom: 0.45rem;
 }
 
-/* Notes Callout Box */
+/* End Game Bullet Points */
+.endgame-list {
+    padding-left: 1.3rem;
+    margin-top: 0.4rem;
+}
+
+.endgame-list li {
+    margin-bottom: 0.45rem;
+    line-height: 1.5;
+    color: #334155;
+}
+
+.endgame-list li::marker {
+    color: var(--primary);
+}
+
+/* Notes Callout Box & Bullet List */
 .notes-box {
     background: #f8fafc;
     border-left: 4px solid #3b82f6;
-    padding: 0.85rem 1rem;
-    border-radius: 4px;
+    padding: 0.85rem 1.1rem;
+    border-radius: 6px;
     margin-top: 1.25rem;
     font-size: 0.9rem;
     color: #1e293b;
 }
 
 .notes-box strong {
+    display: inline-block;
     color: #0f172a;
+    margin-bottom: 0.35rem;
+}
+
+.notes-list {
+    padding-left: 1.2rem;
+    margin-top: 0.25rem;
+}
+
+.notes-list li {
+    margin-bottom: 0.4rem;
+    line-height: 1.5;
+    color: #334155;
+}
+
+.notes-list li:last-child {
+    margin-bottom: 0;
+}
+
+.notes-list li::marker {
+    color: #3b82f6;
 }
 
 /* Components Checklist Layout */

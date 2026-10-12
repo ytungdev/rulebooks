@@ -7,37 +7,57 @@
     "playTime": "40-70 min",
     "bggUrl": "https://boardgamegeek.com/boardgame/266192/wingspan",
     "resources": [
-      {
-        "title": "📖 Official Links",
-        "url": "https://stonemaiergames.com/games/wingspan/"
-      },
-      {
-        "title": "Wingspan’s Rulepop",
-        "url": "https://wingspan.rulepop.com/"
-      }
+        {
+            "title": "📖 Official Links",
+            "url": "https://stonemaiergames.com/games/wingspan/"
+        },
+        {
+            "title": "Wingspan’s Rulepop",
+            "url": "https://wingspan.rulepop.com/"
+        }
     ],
     "components": [
-      "170 Unique Bird cards",
-      "26 Bonus cards",
-      "5 Custom wooden food dice",
-      "1 Birdfeeder dice tower",
-      "5 Player mats",
-      "75 Miniature plastic eggs",
-      "40 Wooden action cubes (8 in each of 5 colors)",
-      "103 Food tokens (Invertebrate, Seed, Fish, Fruit, Rodent)",
-      "1 Bird tray (3-card display)",
-      "1 Double-sided End-of-Round Goal board",
-      "8 Goal tiles",
-      "1 First-player token & 1 Scorepad"
+        "170 Unique Bird cards",
+        "26 Bonus cards",
+        "5 Custom wooden food dice",
+        "1 Birdfeeder dice tower",
+        "5 Player mats",
+        "75 Miniature plastic eggs",
+        "40 Wooden action cubes (8 in each of 5 colors)",
+        "103 Food tokens (Invertebrate, Seed, Fish, Fruit, Rodent)",
+        "1 Bird tray (3-card display)",
+        "1 Double-sided End-of-Round Goal board",
+        "8 Goal tiles",
+        "1 First-player token & 1 Scorepad"
     ],
-    "setup": "1. Each player receives a player mat, 8 action cubes of 1 color, 5 bird cards, 2 bonus cards, and 1 of each food token (5 total).\n2. Keep up to 5 bird cards; for every bird kept, discard 1 food token (cards kept + food kept must equal 5).\n3. Keep 1 bonus card and discard the other.\n4. Roll the 5 food dice into the birdfeeder.\n5. Deal 3 face-up bird cards into the bird tray.\n6. Place 4 random end-of-round goal tiles onto the goal board.",
+    "setup": [
+        "Each player receives 1 player mat, 8 action cubes of 1 color, 5 bird cards, 2 bonus cards, and 1 of each food token (5 total).",
+        "Choose which bird cards to keep (up to 5). For every bird card kept, discard 1 food token (total cards kept + food kept must equal 5).",
+        "Choose 1 bonus card to keep and discard the other.",
+        "Roll the 5 food dice into the birdfeeder dice tower.",
+        "Deal 3 face-up bird cards into the bird tray; place remaining cards as a face-down draw deck.",
+        "Place 4 random end-of-round goal tiles onto the goal board (matching the chosen side: green for direct rank, blue for threshold scoring)."
+    ],
     "procedure": [
-      "Place 1 action cube on the leftmost exposed slot of one of the 4 rows on your mat:",
-      "Action A - Play a Bird: Pay the food cost printed on the bird card plus the egg cost of the column (0, 1, or 2 eggs). Trigger any 'WHEN PLAYED' (white) power.",
-      "Action B - Gain Food (Forest): Take food dice shown on the space from the birdfeeder. Then activate all 'WHEN ACTIVATED' (brown) powers in that forest row moving RIGHT to LEFT.",
-      "Action C - Lay Eggs (Grasslands): Take eggs shown on the space and place them on birds up to each bird's egg limit. Then activate all brown powers in that grassland row from RIGHT to LEFT.",
-      "Action D - Draw Cards (Wetlands): Draw bird cards shown on the space from the tray or deck. Then activate all brown powers in that wetlands row from RIGHT to LEFT."
+        "Place 1 action cube on the leftmost exposed slot of one of the 4 rows on your mat:",
+        "Action A - Play a Bird: Pay the food cost printed on the bird card plus the egg cost of the column (0, 1, or 2 eggs). Trigger any 'WHEN PLAYED' (white) power.",
+        "Action B - Gain Food (Forest): Take food dice shown on the space from the birdfeeder. Then activate all 'WHEN ACTIVATED' (brown) powers in that forest row moving RIGHT to LEFT.",
+        "Action C - Lay Eggs (Grasslands): Take eggs shown on the space and place them on birds up to each bird's egg limit. Then activate all brown powers in that grassland row from RIGHT to LEFT.",
+        "Action D - Draw Cards (Wetlands): Draw bird cards shown on the space from the tray or deck. Then activate all brown powers in that wetlands row from RIGHT to LEFT."
     ],
-    "endGame": "Game ends after Round 4. Calculate total score across 6 categories:\n1. Printed Victory Points on played bird cards\n2. Completed Bonus cards\n3. End-of-round goal points\n4. 1 point per egg stored on birds\n5. 1 point per food token cached on birds\n6. 1 point per card tucked beneath birds\n\n⚖️ Tie-Breaker: Most unused food tokens in personal supply wins. If still tied, victory is shared.",
-    "notes": "• Round length shrinks each round: R1 = 8 turns, R2 = 7 turns, R3 = 6 turns, R4 = 5 turns (because 1 cube is placed on the goal board each round).\n• Birdfeeder Reroll rule: You may only reroll all dice in the birdfeeder if all dice in the feeder show the same face, or if the feeder is completely empty."
-  }
+    "endGame": [
+        "Trigger: Game ends immediately after Round 4 (when all 4 end-of-round goals are evaluated).",
+        "Bird Cards: Sum the printed Victory Points on all bird cards played on your mat.",
+        "Bonus Cards: Score points for all achieved conditions on your kept bonus cards.",
+        "End-of-Round Goals: Add points scored on the goal board across all 4 rounds.",
+        "Eggs: 1 Victory Point per egg token remaining on bird cards.",
+        "Food Cached: 1 Victory Point per food token stored on bird cards.",
+        "Cards Tucked: 1 Victory Point per card tucked beneath bird cards.",
+        "⚖️ Tie-Breaker: The tied player with the most unused food tokens in their personal supply wins. If still tied, victory is shared."
+    ],
+    "notes": [
+        "Round Length: The number of turns decreases each round (R1 = 8, R2 = 7, R3 = 6, R4 = 5) because 1 action cube is placed on the goal board at the end of each round.",
+        "Birdfeeder Reroll: You may only reroll all dice in the birdfeeder if all dice in the feeder show the exact same face, or if the feeder is completely empty.",
+        "Food Conversion: At any time during your turn, you may exchange any 2 food tokens for any 1 food token of your choice."
+    ]
+}
