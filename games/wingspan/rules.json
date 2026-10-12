@@ -1,0 +1,18 @@
+{
+    "id": "wingspan",
+    "title": "Wingspan",
+    "icon": "🪶",
+    "players": "1-5",
+    "playTime": "40-70 min",
+    "setup": "1. Each player receives a player mat, 8 action cubes of 1 color, 5 bird cards, 2 bonus cards, and 1 of each food token (5 total).\n2. Keep up to 5 bird cards; for every bird kept, discard 1 food token (cards kept + food kept must equal 5).\n3. Keep 1 bonus card and discard the other.\n4. Roll the 5 food dice into the birdfeeder.\n5. Deal 3 face-up bird cards into the bird tray.\n6. Place 4 random end-of-round goal tiles onto the goal board.",
+    "turnOrder": [
+      "Place 1 action cube on the leftmost exposed slot of one of the 4 rows on your mat:",
+      "Action A - Play a Bird: Pay the food cost printed on the bird card plus the egg cost of the column (0, 1, or 2 eggs). Trigger any 'WHEN PLAYED' (white) power.",
+      "Action B - Gain Food (Forest): Take food dice shown on the space from the birdfeeder. Then activate all 'WHEN ACTIVATED' (brown) powers in that forest row moving RIGHT to LEFT.",
+      "Action C - Lay Eggs (Grasslands): Take eggs shown on the space and place them on birds up to each bird's egg limit. Then activate all brown powers in that grassland row from RIGHT to LEFT.",
+      "Action D - Draw Cards (Wetlands): Draw bird cards shown on the space from the tray or deck. Then activate all brown powers in that wetlands row from RIGHT to LEFT."
+    ],
+    "endGame": "Game ends after Round 4. Calculate total score across 6 categories:\n1. Printed Victory Points on played bird cards\n2. Completed Bonus cards\n3. End-of-round goal points\n4. 1 point per egg stored on birds\n5. 1 point per food token cached on birds\n6. 1 point per card tucked beneath birds",
+    "tieBreaker": "The tied player with the most unused food tokens in their personal supply wins. If still tied, victory is shared.",
+    "proTips": "• Round length shrinks each round: R1 = 8 turns, R2 = 7 turns, R3 = 6 turns, R4 = 5 turns (because 1 cube is placed on the goal board each round).\n• Birdfeeder Reroll rule: You may only reroll all dice in the birdfeeder if all dice in the feeder show the same face, or if the feeder is completely empty."
+  }
