@@ -38,7 +38,6 @@
       "Action C - Lay Eggs (Grasslands): Take eggs shown on the space and place them on birds up to each bird's egg limit. Then activate all brown powers in that grassland row from RIGHT to LEFT.",
       "Action D - Draw Cards (Wetlands): Draw bird cards shown on the space from the tray or deck. Then activate all brown powers in that wetlands row from RIGHT to LEFT."
     ],
-    "endGame": "Game ends after Round 4. Calculate total score across 6 categories:\n1. Printed Victory Points on played bird cards\n2. Completed Bonus cards\n3. End-of-round goal points\n4. 1 point per egg stored on birds\n5. 1 point per food token cached on birds\n6. 1 point per card tucked beneath birds",
-    "tieBreaker": "The tied player with the most unused food tokens in their personal supply wins. If still tied, victory is shared.",
+    "endGame": "Game ends after Round 4. Calculate total score across 6 categories:\n1. Printed Victory Points on played bird cards\n2. Completed Bonus cards\n3. End-of-round goal points\n4. 1 point per egg stored on birds\n5. 1 point per food token cached on birds\n6. 1 point per card tucked beneath birds\n\n⚖️ Tie-Breaker: Most unused food tokens in personal supply wins. If still tied, victory is shared.",
     "notes": "• Round length shrinks each round: R1 = 8 turns, R2 = 7 turns, R3 = 6 turns, R4 = 5 turns (because 1 cube is placed on the goal board each round).\n• Birdfeeder Reroll rule: You may only reroll all dice in the birdfeeder if all dice in the feeder show the same face, or if the feeder is completely empty."
   }

@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ? `<div class="modal-cover-wrap"><img src="${rules.cover}" alt="${rules.title}" class="modal-cover" /></div>`
             : "";
 
-        // External Resources (BGG + optional resources array)
+        // External Resources
         const resourceLinks = [];
         if (rules.bggUrl) {
             resourceLinks.push(`<a href="${rules.bggUrl}" target="_blank" rel="noopener noreferrer" class="resource-link bgg-link">🎲 BoardGameGeek</a>`);
@@ -113,13 +113,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const resourcesHtml = resourceLinks.length > 0
             ? `
-                <div class="rule-section">
-                <h4>🌐 External Resources</h4>
-                <div class="resources-container">
-                    ${resourceLinks.join("")}
-                </div>
-                </div>
-            `
+        <div class="rule-section">
+          <h4>🌐 External Resources</h4>
+          <div class="resources-container">
+            ${resourceLinks.join("")}
+          </div>
+        </div>
+      `
             : "";
 
         // Components section
@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
             : "";
 
         // Procedure section
-        const procedureSteps = rules.procedure || [];
+        const procedureSteps = rules.procedure || rules.turnOrder || [];
         const procedureHtml = procedureSteps.length > 0
             ? `
         <div class="rule-section">
@@ -147,6 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
       `
             : "";
 
+        
         // Notes section
         const notesContent = rules.notes || rules.proTips;
         const notesHtml = notesContent
@@ -178,12 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       <div class="rule-section">
         <h4>🏁 End Game & Scoring</h4>
-        <p style="white-space: pre-line;">${rules.endGame}</p>
-      </div>
-
-      <div class="rule-section">
-        <h4>⚖️ Tie Breaker</h4>
-        <p>${rules.tieBreaker}</p>
+        <p style="white-space: pre-line;">${endGameText}</p>
       </div>
 
       ${notesHtml}
