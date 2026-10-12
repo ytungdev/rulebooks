@@ -303,7 +303,31 @@ ul.rule-list li::marker {
 }
 
 /* ===================================================
-     Vertical External Resources List
+   Components: Two-Column Unordered List
+   =================================================== */
+.components-list {
+    columns: 2;
+    /* Creates 2 balanced vertical columns */
+    column-gap: 2rem;
+    /* Spacing between the columns */
+    padding-left: 1.4rem;
+}
+
+.components-list li {
+    break-inside: avoid;
+    /* Prevents bullets from splitting across columns */
+    margin-bottom: 0.45rem;
+}
+
+/* Mobile responsive: collapse into 1 column on smaller phone screens */
+@media (max-width: 540px) {
+    .components-list {
+        columns: 1;
+    }
+}
+
+/* ===================================================
+     External Resources List
      =================================================== */
 .resource-list {
     display: flex;

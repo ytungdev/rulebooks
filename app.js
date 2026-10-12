@@ -121,15 +121,15 @@ document.addEventListener("DOMContentLoaded", () => {
             `
             : "";
 
-        // 2. Components section
+        // 2. Components Section (Two-Column Unordered List)
         const componentsHtml = rules.components && rules.components.length > 0
             ? `
-                <div class="rule-section">
+            <div class="rule-section">
                 <h4>📦 Components</h4>
-                <ul class="rule-list">
-                    ${rules.components.map((item) => `<li>${item}</li>`).join("")}
+                <ul class="rule-list components-list">
+                ${rules.components.map((item) => `<li>${item}</li>`).join("")}
                 </ul>
-                </div>
+            </div>
             `
             : "";
 
