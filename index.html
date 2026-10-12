@@ -1,47 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rulebooks</title>
-  
-  <link rel="manifest" href="manifest.json" />
-  <meta name="theme-color" content="#0f172a" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rulebooks</title>
+
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <header>
-    <div class="container">
-      <h1>🎲 Tabletop Rulebooks</h1>
-      <p>All rules at a glance.</p>
-      <input type="text" id="searchInput" placeholder="Search by game, mechanics, or player count..." />
-    </div>
-  </header>
+    <header>
+        <div class="container">
+            <h1>🎲 Tabletop Rulebooks</h1>
+            <p>All rules at a glance.</p>
+            <input type="text" id="searchInput" placeholder="Search by game, mechanics, or player count..." />
+        </div>
+    </header>
 
-  <main class="container">
-    <div id="galleryGrid" class="gallery-grid">
-      <!-- Injected dynamically via app.js -->
-    </div>
-  </main>
+    <main class="container">
+        <div id="galleryGrid" class="gallery-grid">
+            <!-- Injected dynamically via app.js -->
+        </div>
+    </main>
 
-  <!-- Detail Modal -->
-  <div id="ruleModal" class="modal hidden" role="dialog" aria-modal="true">
-    <div class="modal-backdrop" id="modalBackdrop"></div>
-    <div class="modal-card">
-      <button class="close-btn" id="closeModalBtn" aria-label="Close modal">&times;</button>
-      <div id="modalContent">
-        <!-- Injected dynamically via app.js -->
-      </div>
+    <!-- Detail Modal -->
+    <div id="ruleModal" class="modal hidden" role="dialog" aria-modal="true">
+        <div class="modal-backdrop" id="modalBackdrop"></div>
+        <div class="modal-card">
+            <button class="close-btn" id="closeModalBtn" aria-label="Close modal">&times;</button>
+            <div id="modalContent">
+                <!-- Injected dynamically via app.js -->
+            </div>
+        </div>
     </div>
-  </div>
 
-  <footer>
-    <div class="container">
-      <p>Works offline. Bookmark or Add to Home Screen for table-side access.</p>
-    </div>
-  </footer>
+    <footer>
+        <div class="container">
+            <p>Works offline. Bookmark or Add to Home Screen for table-side access.</p>
+        </div>
+    </footer>
 
-  <script src="app.js"></script>
+    <script src="app.js"></script>
 </body>
+
 </html>
