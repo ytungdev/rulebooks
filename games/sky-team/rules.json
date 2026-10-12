@@ -1,0 +1,55 @@
+{
+  "id": "sky-team",
+  "title": "Sky Team",
+  "icon": "✈️",
+  "cover": "./games/sky-team/cover.jpg",
+  "players": "2",
+  "playTime": "20 min",
+  "bggUrl": "https://boardgamegeek.com/boardgame/374476/sky-team",
+  "resources": [
+    {
+      "title": "📖 Official Rulebook (PDF)",
+      "url": "https://cdn.1j1ju.net/medias/63/87/40-sky-team-rulebook.pdf"
+    },
+    {
+      "title": "Watch It Played (Video Guide)",
+      "url": "https://www.youtube.com/watch?v=kYJvMv6n1g8"
+    }
+  ],
+  "components": [
+    "1 Central Control Panel instrument board",
+    "1 Airplane altitude track & 1 Approach track",
+    "4 Blue Pilot dice & 4 Orange Co-Pilot dice",
+    "3 Coffee tokens (reroll/modify dice)",
+    "1 Artificial Horizon tilt axis marker",
+    "Landing Gear, Flaps, and Brake markers",
+    "Traffic airplane tokens",
+    "2 Player screens"
+  ],
+  "setup": [
+    "Place the control board between both players. One player takes the Blue Pilot screen & dice; the other takes the Orange Co-Pilot screen & dice.",
+    "Choose an Airport approach card (start with Montreal - YUL) and place the Altitude marker on space 7.",
+    "Place traffic planes on the approach track according to the airport card instructions.",
+    "Set the tilt marker perfectly level on the center 0 space of the Horizon axis.",
+    "Place all 3 landing gear switches, 3 flap switches, and the brake marker in their starting upright positions."
+  ],
+  "procedure": [
+    "Phase 1 - Strategy Briefing: Discuss general goals and strategy with your partner. Once dice are rolled, absolutely NO verbal communication or gesturing is permitted!",
+    "Phase 2 - Roll Dice: Both players roll their 4 dice behind their respective screens.",
+    "Phase 3 - Dice Placement: Alternating one at a time, each player places 1 die onto an unoccupied cockpit space:",
+    "Mandatory Space A (Axis): Both Pilot and Co-Pilot must place 1 die on the Axis. The difference tilts the plane left or right.",
+    "Mandatory Space B (Engines): Both Pilot and Co-Pilot must place 1 die on the Engines. The sum determines if your plane advances 0, 1, or 2 spaces down the approach track.",
+    "Optional Spaces: Deploy Landing Gear (Pilot only), Deploy Flaps (Co-Pilot only), Radio (remove traffic planes from the approach track), Coffee (create reroll modifier tokens), or Brakes (increase final landing braking power).",
+    "Phase 4 - Altitude Step: Descend the plane by 1 altitude level. Repeat until final approach."
+  ],
+  "endGame": [
+    "Victory Condition: Complete all 7 altitude rounds and land safely at Altitude 0 with: horizon axis perfectly level, all 3 landing gears deployed, all 3 flaps deployed, no traffic planes on the runway, and engine speed less than or equal to active brakes.",
+    "Crash / Defeat Conditions: You crash immediately if: horizon tilts too far into the red, engine speed causes collision with a traffic plane, engine speed causes the plane to overshoot or stall, or required mandatory dice cannot be placed.",
+    "⚖️ Tie-Breaker: Pure cooperative game (mutual landing success or crash)."
+  ],
+  "notes": [
+    "Strict Silence Rule: As soon as dice hit the table behind screens, neither player may suggest moves, hint at dice values, or signal what they need.",
+    "Coffee Tokens: Spending 1 coffee token allows a player to adjust a die value by +1 or -1, or reroll unplaced dice.",
+    "Aerodynamics: Deploying flaps and landing gear increases drag, changing the speed threshold required to advance on the track."
+  ]
+}

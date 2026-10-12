@@ -1,0 +1,58 @@
+{
+    "id": "camel-up",
+    "title": "Camel Up",
+    "icon": "🐪",
+    "cover": "./games/camel-up/cover.jpg",
+    "players": "3-8",
+    "playTime": "30-45 min",
+    "bggUrl": "https://boardgamegeek.com/boardgame/260528/camel-up-second-edition",
+    "resources": [
+      {
+        "title": "📖 Official Rulebook (PDF)",
+        "url": "https://images.zmangames.com/filer_public/a0/02/a0026e95-71ad-46fc-9b81-ebc132cead85/camel_up_rulebook.pdf"
+      },
+      {
+        "title": "Watch It Played (Video Tutorial)",
+        "url": "https://www.youtube.com/watch?v=F0s3jQj-e6g"
+      }
+    ],
+    "components": [
+      "1 Racetrack game board",
+      "1 Dice pyramid dice shaker",
+      "5 Racing Camels (stacked wooden figures)",
+      "2 Crazy Camels (black & white, running backward)",
+      "5 Racing Dice & 1 Grey Die for crazy camels",
+      "40 Finish Cards (overall winner/loser bets)",
+      "20 Leg Betting Tiles",
+      "8 Spectator Tiles (Oasis / Mirage)",
+      "80 Egyptian Pound coins"
+    ],
+    "setup": [
+      "Assemble the track board and place the dice pyramid in the center area.",
+      "Place all 5 dice into the pyramid shaker, shake, and roll them out one by one onto the board to determine starting camel positions on spaces 1–3.",
+      "Stack camels that land on the exact same space (camels on top are considered ahead).",
+      "Roll the grey die to determine the starting backwards-facing positions of the 2 Crazy Camels (spaces 16 down to 14).",
+      "Each player takes 3 Egyptian pounds, 1 Spectator tile, and 5 finish betting cards of their chosen character color.",
+      "Organize the Leg Betting tiles into stacks (5, 3, 2 points) next to the track."
+    ],
+    "procedure": [
+      "On your turn, take exactly 1 of the following 4 actions:",
+      "Action 1 - Take a Leg Betting Tile: Take the top tile for a camel color you think will be in 1st place when this leg ends.",
+      "Action 2 - Place Your Spectator Tile: Place your tile on an empty space on the track (Oasis side: +1 space / Mirage side: -1 space). Gain 1 coin whenever a camel unit lands on it.",
+      "Action 3 - Take a Pyramid Ticket: Take 1 Pyramid Ticket worth 1 coin, release 1 die from the pyramid, and move the matching camel (carrying all camels on top of it).",
+      "Action 4 - Bet on Overall Winner or Loser: Secretly place 1 of your Finish betting cards face-down onto the Overall Winner or Overall Loser deck."
+    ],
+    "endGame": [
+      "Trigger: The game ends immediately when any camel crosses the finish line on space 16 (or beyond).",
+      "Step 1: Score the current final Leg tiles as normal.",
+      "Step 2: Score the Overall Winner deck in order (first correct bet earns 8 coins, second earns 5, etc.; incorrect bets lose 1 coin).",
+      "Step 3: Score the Overall Loser deck in the same manner.",
+      "Step 4: Count total Egyptian Pound coins in hand.",
+      "⚖️ Tie-Breaker: Most remaining Leg Betting tiles among tied players; if still tied, shared victory."
+    ],
+    "notes": [
+      "Piggyback Rule: Camels carry all camels stacked above them when they move. Camels below stay behind.",
+      "Crazy Camels: Black and white camels run counter-clockwise. If a racing camel lands on a crazy camel, it is carried backward!",
+      "Leg End: A leg ends the moment the 5th die is rolled from the pyramid. Settle all leg tile payouts and reset the pyramid."
+    ]
+  }

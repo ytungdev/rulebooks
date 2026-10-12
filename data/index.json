@@ -1,12 +1,137 @@
 [
     {
-      "id": "wingspan",
-      "title": "Wingspan",
-      "icon": "🪶",
-      "cover":  "./games/wingspan/cover.jpg",
-      "players": "1-5",
-      "playTime": "40-70 min",
-      "weight": "Medium",
-      "tags": ["Engine Building", "Hand Management", "Set Collection", "Card Drafting"]
+        "id": "wingspan",
+        "title": "Wingspan",
+        "icon": "🪶",
+        "cover": "./games/wingspan/cover.jpg",
+        "players": "1-5",
+        "playTime": "40-70 min",
+        "weight": "Medium",
+        "tags": [
+            "Engine Building",
+            "Hand Management",
+            "Set Collection",
+            "Card Drafting"
+        ]
+    },
+    {
+        "id": "camel-up",
+        "title": "Camel Up",
+        "icon": "🐪",
+        "cover": "./games/camel-up/cover.jpg",
+        "players": "3-8",
+        "playTime": "30-45 min",
+        "weight": "Light",
+        "tags": [
+            "Betting",
+            "Dice Rolling",
+            "Racing",
+            "Family"
+        ]
+    },
+    {
+        "id": "citadels",
+        "title": "Citadels",
+        "icon": "🏰",
+        "cover": "./games/citadels/cover.jpg",
+        "players": "2-8",
+        "playTime": "30-60 min",
+        "weight": "Medium-Light",
+        "tags": [
+            "Drafting",
+            "Hidden Roles",
+            "City Building",
+            "Bluffing"
+        ]
+    },
+    {
+        "id": "decrypto",
+        "title": "Decrypto",
+        "icon": "🕵️",
+        "cover": "./games/decrypto/cover.jpg",
+        "players": "3-8",
+        "playTime": "30 min",
+        "weight": "Medium-Light",
+        "tags": [
+            "Word Game",
+            "Deduction",
+            "Team-Based",
+            "Party"
+        ]
+    },
+    {
+        "id": "7-wonders-duel",
+        "title": "7 Wonders: Duel",
+        "icon": "🏛️",
+        "cover": "./games/7-wonders-duel/cover.jpg",
+        "players": "2",
+        "playTime": "30 min",
+        "weight": "Medium",
+        "tags": [
+            "Drafting",
+            "2-Player",
+            "Card Drafting",
+            "Set Collection"
+        ]
+    },
+    {
+        "id": "sky-team",
+        "title": "Sky Team",
+        "icon": "✈️",
+        "cover": "./games/sky-team/cover.jpg",
+        "players": "2",
+        "playTime": "20 min",
+        "weight": "Medium-Light",
+        "tags": [
+            "Cooperative",
+            "2-Player",
+            "Dice Placement",
+            "Limited Communication"
+        ]
+    },
+    {
+        "id": "pandemic",
+        "title": "Pandemic",
+        "icon": "☣️",
+        "cover": "./games/pandemic/cover.jpg",
+        "players": "2-4",
+        "playTime": "45 min",
+        "weight": "Medium",
+        "tags": [
+            "Cooperative",
+            "Hand Management",
+            "Set Collection",
+            "Point to Point"
+        ]
+    },
+    {
+        "id": "secret-hitler",
+        "title": "Secret Hitler",
+        "icon": "📜",
+        "cover": "./games/secret-hitler/cover.jpg",
+        "players": "5-10",
+        "playTime": "45 min",
+        "weight": "Medium-Light",
+        "tags": [
+            "Social Deduction",
+            "Bluffing",
+            "Hidden Roles",
+            "Voting"
+        ]
+    },
+    {
+        "id": "eternal-deck",
+        "title": "Eternal Decks",
+        "icon": "💎",
+        "cover": "./games/eternal-deck/cover.jpg",
+        "players": "1-4",
+        "playTime": "30-45 min",
+        "weight": "Medium",
+        "tags": [
+            "Cooperative",
+            "Limited Communication",
+            "Puzzle",
+            "Grid Building"
+        ]
     }
-  ]
+]

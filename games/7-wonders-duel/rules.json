@@ -1,0 +1,53 @@
+{
+    "id": "7-wonders-duel",
+    "title": "7 Wonders: Duel",
+    "icon": "🏛️",
+    "cover": "./games/7-wonders-duel/cover.jpg",
+    "players": "2",
+    "playTime": "30 min",
+    "bggUrl": "https://boardgamegeek.com/boardgame/173346/7-wonders-duel",
+    "resources": [
+      {
+        "title": "📖 Official Rulebook (PDF)",
+        "url": "https://www.rprod.com/files/7WDUEL_RULES_US.pdf"
+      },
+      {
+        "title": "Watch It Played (Video Tutorial)",
+        "url": "https://www.youtube.com/watch?v=F_fW7B0w_p8"
+      }
+    ],
+    "components": [
+      "1 Military game board",
+      "1 Conflict Pawn",
+      "12 Wonder cards",
+      "73 Age cards (Age I, Age II, Age III)",
+      "14 Military tokens & 10 Progress tokens",
+      "31 Coins (1, 3, and 6 denominations)",
+      "1 Scorepad"
+    ],
+    "setup": [
+      "Place the board between players; set the Conflict pawn on the center zero space.",
+      "Place the 4 Military penalty tokens face-up on their matching track spaces.",
+      "Shuffle Progress tokens and place 5 face-up on the board; return remaining to the box.",
+      "Deal 4 Wonder cards to each player via the drafting procedure (4 total Wonders per player).",
+      "Each player starts with 7 coins.",
+      "Arrange Age I cards in the designated overlapping pyramid structure (some face-up, some face-down)."
+    ],
+    "procedure": [
+      "Players alternate taking turns, selecting 1 completely exposed card (not covered by any other card) from the card display:",
+      "Option 1 - Construct the Building: Pay the coin or resource cost printed on the card and place it into your city.",
+      "Option 2 - Discard for Coins: Discard the card to the box and take 2 coins + 1 additional coin per yellow commercial building currently in your city.",
+      "Option 3 - Construct a Wonder: Pay the resource cost of 1 of your unbuilt Wonders, then tuck the drafted card face-down underneath that Wonder."
+    ],
+    "endGame": [
+      "Instant Victory 1 (Military Supremacy): If the Conflict pawn ever pushes all the way into the opponent's capital space, the game ends immediately in victory.",
+      "Instant Victory 2 (Scientific Supremacy): If a player ever collects 6 different scientific symbols across their green cards, the game ends immediately in victory.",
+      "Civilian Victory (Age III End): If neither instant victory occurs by the end of Age III, sum up Victory Points across: Military track, Blue/Green/Yellow/Purple buildings, built Wonders, Progress tokens, and 1 VP per 3 coins in treasury.",
+      "⚖️ Tie-Breaker: Most Victory Points from blue Civilian buildings; if still tied, shared victory."
+    ],
+    "notes": [
+      "The 7 Wonders Cap: Only 7 total Wonders can be built between both players! The moment a 7th Wonder is constructed across the board, the 8th unbuilt Wonder is discarded.",
+      "Trading Costs: If you lack a resource, you must purchase it from the bank for 2 coins + 1 additional coin for every matching resource symbol your opponent produces.",
+      "Chained Construction: Many cards feature symbol icons allowing free construction of matching advanced buildings in future Ages."
+    ]
+  }

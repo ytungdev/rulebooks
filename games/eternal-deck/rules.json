@@ -1,0 +1,50 @@
+{
+    "id": "eternal-deck",
+    "title": "Eternal Decks",
+    "icon": "💎",
+    "cover": "./games/eternal-deck/cover.jpg",
+    "players": "1-4",
+    "playTime": "30-45 min",
+    "bggUrl": "https://boardgamegeek.com/boardgame/426027/eternal-decks",
+    "resources": [
+      {
+        "title": "📖 Official Rulebook (PDF)",
+        "url": "https://tesera.ru/images/items/2520025/EternalDecks_EN_Rulebooks_2nd_2025_0623.pdf"
+      },
+      {
+        "title": "Condensed How to Play Video",
+        "url": "https://www.youtube.com/watch?v=t7iCIpB_Rh8"
+      }
+    ],
+    "components": [
+      "64 Eternal Cards (8 unique character decks of 8 cards each)",
+      "Starting Decks (5 cards per player)",
+      "Stage Objective Sheets (Stages 1 through 6)",
+      "Jewel energy tokens",
+      "3-Row Field grid markers"
+    ],
+    "setup": [
+      "Select a Stage sheet (Stage 1 for beginner play) and place it face-up on the table.",
+      "Each player receives their starting 5-card personal deck and draws an opening hand.",
+      "Place the chosen Eternal character decks in face-up supply rows.",
+      "Construct the 3-row central Field area and place the initial Jewel supply nearby.",
+      "Review the specific stage conditions and environmental restrictions."
+    ],
+    "procedure": [
+      "On your turn, you must take exactly 1 of the following actions:",
+      "Action 1 - Play a Card to the Field: Place a card into 1 of the 3 Field rows. Crucial placement rule: adjacent cards in any row or column cannot share the same color or the same numerical value.",
+      "Action 2 - Play a Card to the River: Place a resource card into the shared river reserve to save it for teammates or prepare future combos.",
+      "Action 3 - Generate a Jewel: Discard a card to gain a Jewel token from the supply (used to cancel negative curses or activate special stage abilities).",
+      "Action 4 - Aid a Teammate: Pass a card to an ally without speaking about its value or power."
+    ],
+    "endGame": [
+      "Victory Condition: Complete all goals indicated on the active Stage sheet before any player runs out of legal actions.",
+      "Defeat Condition: The team immediately loses if any player is required to take an action on their turn but has no legal move available.",
+      "⚖️ Tie-Breaker: Cooperative game (all players share collective victory or defeat)."
+    ],
+    "notes": [
+      "Strict Limited Communication: You may never reveal the values, colors, or names of cards currently held in your hand.",
+      "Spatial Constraints: Always verify both orthogonal neighbors (color and number) before completing a card placement in the Field.",
+      "Jewel Management: Do not stockpile Jewels unnecessarily; use them early to mitigate devastating Eternal curses."
+    ]
+  }

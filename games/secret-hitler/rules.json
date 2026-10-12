@@ -1,0 +1,61 @@
+{
+    "id": "secret-hitler",
+    "title": "Secret Hitler",
+    "icon": "📜",
+    "cover": "./games/secret-hitler/cover.jpg",
+    "players": "5-10",
+    "playTime": "45 min",
+    "bggUrl": "https://boardgamegeek.com/boardgame/188834/secret-hitler",
+    "resources": [
+      {
+        "title": "📖 Official Rulebook (PDF)",
+        "url": "https://www.secrethitler.com/assets/Secret_Hitler_Rules.pdf"
+      },
+      {
+        "title": "Watch It Played (Video Guide)",
+        "url": "https://www.youtube.com/watch?v=mbGXIDYtxas"
+      }
+    ],
+    "components": [
+      "1 Liberal policy track board",
+      "1 Fascist policy track board (varies by player count)",
+      "17 Policy tiles (6 Liberal, 11 Fascist)",
+      "10 Secret Role cards (Liberals, Fascists, Hitler)",
+      "10 Party Membership cards (Liberal, Fascist)",
+      "10 Ja! voting cards & 10 Nein! voting cards",
+      "1 President placard & 1 Chancellor placard",
+      "1 Election Tracker marker"
+    ],
+    "setup": [
+      "Place the Liberal and matching Fascist boards in the center of the table; set Election Tracker on 0.",
+      "Shuffle the 17 Policy tiles face-down into a draw deck.",
+      "Distribute secret role envelopes (each containing 1 Secret Role card, 1 Party Membership card, and Ja/Nein voting cards).",
+      "Conduct the Night Phase: Everyone closes eyes. Fascists open eyes and identify each other and Hitler (in 5-6 player games, Hitler opens eyes; in 7-10 player games, Hitler keeps eyes closed with thumb raised).",
+      "Assign the President placard to a random starting player."
+    ],
+    "procedure": [
+      "Each game round consists of 3 sequential steps:",
+      "Step 1 - Election Phase:",
+      "• The Presidency passes clockwise.",
+      "• President nominates a Chancellor candidate (cannot be the previous President or Chancellor in 6+ player games).",
+      "• All players simultaneously vote with Ja! or Nein! cards. If majority votes Nein (or tie), the government fails, advance the Election tracker by 1 (at 3 failed votes, top policy is enacted automatically), and pass the Presidency.",
+      "Step 2 - Legislative Session:",
+      "• If election passes, reset Election tracker to 0.",
+      "• President draws top 3 Policy tiles, secretly discards 1, and passes 2 to Chancellor.",
+      "• Chancellor secretly discards 1 and enacts the remaining Policy onto the matching board (no speaking or signaling during drafting).",
+      "Step 3 - Executive Action (If Fascist Policy Enacted):",
+      "• If the enacted Fascist policy covers an action space, the President must immediately execute the power: Policy Peek, Special Election, Investigate Loyalty, or Execution."
+    ],
+    "endGame": [
+      "Liberal Victory 1: Five Liberal policies are enacted onto the Liberal board.",
+      "Liberal Victory 2: Hitler is successfully executed via an Executive Action.",
+      "Fascist Victory 1: Six Fascist policies are enacted onto the Fascist board.",
+      "Fascist Victory 2: Hitler is elected Chancellor at any point after the 3rd Fascist policy has been enacted.",
+      "⚖️ Tie-Breaker: No ties are possible in Secret Hitler."
+    ],
+    "notes": [
+      "Investigation Power: Investigating a player only reveals their Party Membership card (Liberal or Fascist), NEVER whether they are Hitler.",
+      "Veto Power: Once 5 Fascist policies are enacted, the Chancellor may ask the President to veto both drafted policies; if the President agrees, both are discarded without enacting.",
+      "Dead Men Tell No Tales: Executed players must leave the table in complete silence—they cannot speak, vote, or run for office."
+    ]
+  }

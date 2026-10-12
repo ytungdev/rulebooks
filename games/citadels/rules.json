@@ -1,0 +1,53 @@
+{
+    "id": "citadels",
+    "title": "Citadels",
+    "icon": "🏰",
+    "cover": "./games/citadels/cover.jpg",
+    "players": "2-8",
+    "playTime": "30-60 min",
+    "bggUrl": "https://boardgamegeek.com/boardgame/478/citadels",
+    "resources": [
+      {
+        "title": "📖 Official Rulebook (PDF)",
+        "url": "https://images-cdn.fantasyflightgames.com/filer_public/0a/73/0a73d3a0-f5a1-4fc3-a5ff-b3dc53dbe6ff/wi07_rules_en_web.pdf"
+      },
+      {
+        "title": "Watch It Played (Video Guide)",
+        "url": "https://www.youtube.com/watch?v=F_fW7B0w_p8"
+      }
+    ],
+    "components": [
+      "8 Character Cards (Assassin, Thief, Magician, King, Bishop, Merchant, Architect, Warlord)",
+      "66 District Cards (Noble, Religious, Trade, Military, Unique)",
+      "30 Wooden Gold Coins",
+      "1 Crown token"
+    ],
+    "setup": [
+      "Give the Crown token to the oldest player.",
+      "Shuffle the district deck and deal 4 cards face-down to each player.",
+      "Each player takes 2 gold coins from the supply bank.",
+      "Prepare the 8 Character cards and place 1 face-down (hidden) and specific face-up cards according to player count."
+    ],
+    "procedure": [
+      "Round Phase 1 - Character Selection: The crowned player reviews the remaining Character cards, secretly chooses 1, and passes the rest clockwise until all players have chosen.",
+      "Round Phase 2 - Turn Calls (Ordered 1 through 8): The Crown player calls characters in numeric order (1: Assassin, 2: Thief, 3: Magician, 4: King, 5: Bishop, 6: Merchant, 7: Architect, 8: Warlord).",
+      "Taking Your Turn: When your character number is called, reveal your card and perform the following:",
+      "Step A (Gather Resources): Either take 2 gold coins from the bank OR draw 2 district cards, keep 1, and discard the other.",
+      "Step B (Build Districts): Spend gold equal to the cost printed on a district card to place it face-up in your city (maximum 1 district build per turn, unless Architect).",
+      "Step C (Special Ability): Use your character's unique role power at any legal point during your turn."
+    ],
+    "endGame": [
+      "Trigger: The game round ends after any player builds their 7th district (or 8th in classic edition). Complete the round so all 8 characters act.",
+      "Base Score: Points equal to the total gold cost of all districts in your city.",
+      "Color Bonus: +3 points if your city contains at least 1 district of all 5 colors (Yellow, Blue, Green, Red, Purple).",
+      "First to Finish Bonus: +4 points for the first player who built their 7th/8th district.",
+      "Other Finishers: +2 points for every other player who also reached 7+ districts this round.",
+      "Unique Districts: Add any bonus victory points granted by purple unique buildings.",
+      "⚖️ Tie-Breaker: Compare total score from printed district costs only; if still tied, player with most gold coins wins."
+    ],
+    "notes": [
+      "Duplicate Buildings: You may never build two identical district cards in the same city.",
+      "The Bishop: Your districts cannot be destroyed by the Warlord, unless the Bishop was murdered by the Assassin.",
+      "The Crown: Choosing the King immediately claims the Crown token for the next round's draft, even if killed by the Assassin."
+    ]
+  }

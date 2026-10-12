@@ -1,0 +1,54 @@
+{
+  "id": "decrypto",
+  "title": "Decrypto",
+  "icon": "🕵️",
+  "cover": "./games/decrypto/cover.jpg",
+  "players": "3-8",
+  "playTime": "30 min",
+  "bggUrl": "https://boardgamegeek.com/boardgame/225694/decrypto",
+  "resources": [
+    {
+      "title": "📖 Official Rulebook (PDF)",
+      "url": "https://www.scorpionmasque.com/sites/default/files/decrypto_rules_en_web.pdf"
+    },
+    {
+      "title": "Watch It Played (Video Guide)",
+      "url": "https://www.youtube.com/watch?v=Fj-yZ7P_a0E"
+    }
+  ],
+  "components": [
+    "2 Screen boards (Team White & Team Black)",
+    "110 Keyword cards (440 total secret words)",
+    "48 Code cards (3-digit combinations like 3.4.1)",
+    "1 Sand timer",
+    "50 Note sheets",
+    "4 Interception tokens & 4 Miscommunication tokens"
+  ],
+  "setup": [
+    "Split players into 2 teams (Team White and Team Black); sit facing each other.",
+    "Each team takes their screen, a deck of Code cards, and a note pad.",
+    "Draw 4 Keyword cards and slide them into spaces 1, 2, 3, and 4 on your screen (your secret words for the game).",
+    "Choose a starting Encryptor for each team (this role rotates clockwise each round)."
+  ],
+  "procedure": [
+    "Each round plays out in the following steps:",
+    "Step 1 - Draw Code Card: Both Encryptors draw 1 secret Code card from their team's deck (e.g., 4 - 2 - 1).",
+    "Step 2 - Write 3 Clues: Both Encryptors invent and write down 3 distinct clues corresponding to the 3 secret numbers on their note sheet. Clues must refer to the meaning of the words (no spelling, rhymes, or letters).",
+    "Step 3 - Read Clues Aloud: The White Encryptor reads their 3 clues aloud to both teams.",
+    "Step 4 - Interception Attempt (Round 2+ onwards): The opposing Black team attempts to guess the 3-digit code based on accumulated clues from previous rounds.",
+    "Step 5 - Team Guess: The Encryptor's own White team writes down their guess for the code.",
+    "Step 6 - Reveal Code: The White Encryptor reveals the true 3-digit code. If Black guessed correctly, they earn 1 Interception Token. If White guessed incorrectly, they receive 1 Miscommunication Token.",
+    "Step 7 - Reverse Roles: Repeat Steps 3 through 6 for the Black team's clues."
+  ],
+  "endGame": [
+    "Victory Condition: A team earns 2 Interception Tokens by successfully cracking the opposing team's secret codes.",
+    "Defeat Condition: A team receives 2 Miscommunication Tokens due to failed communication within their own team.",
+    "Simultaneous End: If both win or lose conditions happen in the same round, calculate final score: +1 point per Interception token, -1 point per Miscommunication token.",
+    "⚖️ Tie-Breaker: Each team attempts to guess the other team's 4 secret keywords; most correct keyword guesses wins."
+  ],
+  "notes": [
+    "Clue Specificity: Your clues must be clear enough for your teammates to guess the numbers, but obscure enough that opponents cannot decipher the pattern.",
+    "Public Information: All written clues remain visible to both teams across all subsequent rounds on their note sheets.",
+    "Rotate Encryptor: The Encryptor role MUST rotate each round so every teammate writes clues."
+  ]
+}

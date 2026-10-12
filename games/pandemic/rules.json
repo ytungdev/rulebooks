@@ -1,0 +1,59 @@
+{
+    "id": "pandemic",
+    "title": "Pandemic",
+    "icon": "☣️",
+    "cover": "./games/pandemic/cover.jpg",
+    "players": "2-4",
+    "playTime": "45 min",
+    "bggUrl": "https://boardgamegeek.com/boardgame/30549/pandemic",
+    "resources": [
+      {
+        "title": "📖 Official Rulebook (PDF)",
+        "url": "https://images-cdn.zmangames.com/filer_public/55/ab/55ab8e73-cc87-4305-ad7b-029b301142fa/zm7101_pandemic_rules.pdf"
+      },
+      {
+        "title": "Watch It Played (Video Guide)",
+        "url": "https://www.youtube.com/watch?v=ytK1zDPPDhw"
+      }
+    ],
+    "components": [
+      "1 World Map game board",
+      "7 Role cards with matching player pawns",
+      "96 Disease cubes (24 in each of 4 colors)",
+      "4 Cure markers & 1 Infection Rate marker",
+      "1 Outbreaks marker",
+      "59 Player cards (City cards, Special Events, Epidemics)",
+      "48 Infection cards",
+      "6 Research Stations"
+    ],
+    "setup": [
+      "Place the board with the Outbreaks marker on 0, Infection Rate on 2, and 1 Research Station in Atlanta.",
+      "Infect starting cities: Draw 3 Infection cards and place 3 cubes on each; draw 3 more for 2 cubes each; draw 3 more for 1 cube each.",
+      "Deal random Role cards and reference sheets to each player; place all pawns in Atlanta.",
+      "Deal starting hands: 4 cards each (2-player), 3 cards each (3-player), or 2 cards each (4-player).",
+      "Divide remaining Player cards into 4–6 equal piles, shuffle 1 Epidemic card into each pile, and stack them to create the draw deck."
+    ],
+    "procedure": [
+      "On your turn, execute the following 3 phases in exact order:",
+      "Phase 1 - Perform 4 Actions (in any combination):",
+      "• Movement: Drive/Ferry (adjacent city), Direct Flight (discard destination card), Charter Flight (discard current city card to fly anywhere), Shuttle Flight (travel between two research stations).",
+      "• Treat Disease: Remove 1 cube from your current city (or all cubes of that color if the cure has been discovered).",
+      "• Share Knowledge: Give or take the City card matching your current city to/from an ally in the same location.",
+      "• Build Research Station: Discard the City card matching your current city to place a station.",
+      "• Discover a Cure: At any research station, discard 5 City cards of the same color to cure that disease.",
+      "Phase 2 - Draw 2 Player Cards: Add to hand. If an Epidemic card is drawn, immediately resolve: Increase infection rate, Infect bottom card of infection deck with 3 cubes, Intensify by shuffling the infection discard pile back on TOP of the deck.",
+      "Phase 3 - Infect Cities: Flip cards from the top of the infection deck equal to the current Infection Rate marker; place 1 cube on each city."
+    ],
+    "endGame": [
+      "Victory Condition: Discover cures for all 4 diseases immediately (eradication is not required).",
+      "Defeat Condition 1: The Outbreaks marker reaches the 8th space on the track.",
+      "Defeat Condition 2: You need to place disease cubes of a color on the board, but none are left in the supply.",
+      "Defeat Condition 3: A player needs to draw cards from the Player deck, but the deck has run out.",
+      "⚖️ Tie-Breaker: Cooperative game (collective victory or loss)."
+    ],
+    "notes": [
+      "Outbreak Chain Reaction: If a city already has 3 cubes of a color and must take another, an Outbreak occurs: advance the Outbreak track by 1 and place 1 cube on every adjacent connected city.",
+      "Hand Limit: Players must maintain a strict maximum hand limit of 7 cards at all times (discard or play event cards if over limit).",
+      "Eradication: If a cured disease has all cubes cleared completely from the board, flip its cure vial to the sunset/eradicated side—no further cubes of that color can be placed for the rest of the game."
+    ]
+  }
