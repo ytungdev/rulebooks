@@ -1,7 +1,11 @@
+/* ===================================================
+   Variables & Global Styles
+   =================================================== */
 :root {
     --bg-color: #f8fafc;
     --card-bg: #ffffff;
     --primary: #2563eb;
+    --primary-hover: #1d4ed8;
     --text-main: #0f172a;
     --text-muted: #64748b;
     --border: #e2e8f0;
@@ -26,9 +30,12 @@ body {
     padding: 1.5rem;
 }
 
+/* ===================================================
+     Header & Search Bar
+     =================================================== */
 header {
     background-color: #0f172a;
-    color: #fff;
+    color: #ffffff;
     padding: 2.5rem 1rem;
     text-align: center;
 }
@@ -46,16 +53,28 @@ header p {
 
 #searchInput {
     width: 100%;
-    max-width: 460px;
+    max-width: 480px;
     padding: 0.75rem 1rem;
     font-size: 1rem;
     border-radius: 8px;
     border: 1px solid #334155;
     background-color: #1e293b;
-    color: #fff;
+    color: #ffffff;
+    outline: none;
+    transition: border-color 0.2s ease;
 }
 
-/* Gallery Grid */
+#searchInput:focus {
+    border-color: var(--primary);
+}
+
+#searchInput::placeholder {
+    color: #94a3b8;
+}
+
+/* ===================================================
+     Gallery Grid & Cards
+     =================================================== */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -67,7 +86,7 @@ header p {
     background: var(--card-bg);
     border: 1px solid var(--border);
     border-radius: 12px;
-    padding: 1.5rem;
+    padding: 1.25rem;
     display: flex;
     flex-direction: column;
     cursor: pointer;
@@ -75,8 +94,28 @@ header p {
 }
 
 .gallery-card:hover {
-    transform: translateY(-3px);
+    transform: translateY(-4px);
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+}
+
+.card-cover-wrap {
+    width: 100%;
+    height: 170px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 0.75rem;
+    background-color: #f1f5f9;
+}
+
+.card-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.25s ease;
+}
+
+.gallery-card:hover .card-cover {
+    transform: scale(1.05);
 }
 
 .card-icon {
@@ -88,12 +127,13 @@ header p {
     font-size: 1.25rem;
     font-weight: 700;
     margin-bottom: 0.25rem;
+    color: #0f172a;
 }
 
 .card-meta {
     font-size: 0.85rem;
     color: var(--text-muted);
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
 }
 
 .tags {
@@ -112,62 +152,9 @@ header p {
     font-weight: 600;
 }
 
-/* Setup Ordered Action List */
-.setup-list {
-    padding-left: 1.3rem;
-    margin-top: 0.4rem;
-}
-
-.setup-list li {
-    margin-bottom: 0.5rem;
-    line-height: 1.5;
-    color: #334155;
-}
-
-.setup-list li::marker {
-    font-weight: 700;
-    color: var(--primary);
-}
-
-/* Gallery Card Image Cover */
-.card-cover-wrap {
-    width: 100%;
-    height: 160px;
-    border-radius: 8px;
-    overflow: hidden;
-    margin-bottom: 0.75rem;
-    background-color: #f1f5f9;
-}
-
-.card-cover {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.2s ease;
-}
-
-.gallery-card:hover .card-cover {
-    transform: scale(1.04);
-}
-
-/* Modal Banner Image */
-.modal-cover-wrap {
-    width: 100%;
-    max-height: 220px;
-    overflow: hidden;
-    border-radius: 8px;
-    margin-bottom: 1.25rem;
-    background-color: #f1f5f9;
-}
-
-.modal-cover {
-    width: 100%;
-    height: 100%;
-    max-height: 220px;
-    object-fit: cover;
-}
-
-/* Modal */
+/* ===================================================
+     Modal View
+     =================================================== */
 .modal {
     position: fixed;
     inset: 0;
@@ -190,7 +177,7 @@ header p {
 
 .modal-card {
     position: relative;
-    background: #fff;
+    background: #ffffff;
     border-radius: 12px;
     width: 90%;
     max-width: 680px;
@@ -210,6 +197,37 @@ header p {
     border: none;
     cursor: pointer;
     color: var(--text-muted);
+    line-height: 1;
+}
+
+.close-btn:hover {
+    color: #0f172a;
+}
+
+/* Modal Cover - Displays full image without cropping */
+.modal-cover-wrap {
+    width: 100%;
+    max-height: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f5f9;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 1.25rem;
+    overflow: hidden;
+    padding: 0.5rem;
+}
+
+.modal-cover {
+    max-width: 100%;
+    max-height: 360px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 .modal-header-actions {
@@ -233,98 +251,146 @@ header p {
     border-radius: 6px;
     cursor: pointer;
     font-weight: 600;
+    transition: all 0.15s ease;
 }
 
+.copy-btn:hover {
+    background: #dbeafe;
+}
+
+/* ===================================================
+     Rule Sections & Unified Lists
+     =================================================== */
 .rule-section {
     margin-top: 1.25rem;
 }
 
 .rule-section h4 {
-    font-size: 0.8rem;
+    font-size: 0.82rem;
     text-transform: uppercase;
     color: var(--text-muted);
     letter-spacing: 0.05em;
     margin-bottom: 0.35rem;
 }
 
-.turn-list {
-    padding-left: 1.25rem;
-}
-
-.turn-list li {
-    margin-bottom: 0.45rem;
-}
-
-/* End Game Bullet Points */
-.endgame-list {
-    padding-left: 1.3rem;
+/* Unified list spacing for both <ol> and <ul> */
+.rule-list {
+    padding-left: 1.4rem;
     margin-top: 0.4rem;
+    margin-bottom: 0.5rem;
 }
 
-.endgame-list li {
+.rule-list li {
     margin-bottom: 0.45rem;
-    line-height: 1.5;
+    line-height: 1.55;
     color: #334155;
+    font-size: 0.92rem;
 }
 
-.endgame-list li::marker {
+.rule-list li:last-child {
+    margin-bottom: 0;
+}
+
+/* Accent Numbers for <ol> (Setup, Procedure, End Game) */
+ol.rule-list li::marker {
+    font-weight: 700;
     color: var(--primary);
 }
 
-/* Notes Callout Box & Bullet List */
+/* Accent Bullets for <ul> (Components, Notes) */
+ul.rule-list li::marker {
+    color: var(--primary);
+}
+
+/* ===================================================
+     Vertical External Resources List
+     =================================================== */
+.resource-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    list-style: none;
+    padding-left: 0;
+}
+
+.resource-list li {
+    margin-bottom: 0;
+}
+
+.resource-link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #2563eb;
+    background-color: #eff6ff;
+    border: 1px solid #bfdbfe;
+    padding: 0.35rem 0.75rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.15s ease;
+}
+
+.resource-link:hover {
+    background-color: #dbeafe;
+    color: var(--primary-hover);
+    border-color: #93c5fd;
+    transform: translateX(3px);
+}
+
+.resource-link.bgg-link {
+    color: #c2410c;
+    background-color: #fff7ed;
+    border-color: #fed7aa;
+}
+
+.resource-link.bgg-link:hover {
+    background-color: #ffedd5;
+    color: #9a3412;
+    border-color: #fdba74;
+}
+
+/* ===================================================
+     Notes Callout Box
+     =================================================== */
 .notes-box {
     background: #f8fafc;
-    border-left: 4px solid #3b82f6;
+    border-left: 4px solid var(--primary);
     padding: 0.85rem 1.1rem;
     border-radius: 6px;
     margin-top: 1.25rem;
-    font-size: 0.9rem;
-    color: #1e293b;
+    font-size: 0.92rem;
 }
 
 .notes-box strong {
     display: inline-block;
     color: #0f172a;
-    margin-bottom: 0.35rem;
+    margin-bottom: 0.3rem;
 }
 
-.notes-list {
-    padding-left: 1.2rem;
-    margin-top: 0.25rem;
-}
-
-.notes-list li {
-    margin-bottom: 0.4rem;
-    line-height: 1.5;
-    color: #334155;
-}
-
-.notes-list li:last-child {
-    margin-bottom: 0;
-}
-
-.notes-list li::marker {
-    color: #3b82f6;
-}
-
-/* Components Checklist Layout */
-.components-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 0.4rem 1rem;
-    padding-left: 1.2rem;
-    margin-top: 0.4rem;
-    font-size: 0.9rem;
-    color: #334155;
-}
-
-.components-grid li {
-    line-height: 1.4;
-}
-
+/* ===================================================
+     Footer & Print Media
+     =================================================== */
 footer {
     text-align: center;
     padding: 2.5rem 0;
     color: var(--text-muted);
     font-size: 0.85rem;
+}
+
+@media print {
+
+    header input,
+    .close-btn,
+    .copy-btn,
+    footer {
+        display: none;
+    }
+
+    .modal-card {
+        box-shadow: none;
+        border: none;
+        max-height: none;
+        width: 100%;
+    }
 }

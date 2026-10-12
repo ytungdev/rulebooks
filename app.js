@@ -99,10 +99,10 @@ document.addEventListener("DOMContentLoaded", () => {
             ? `<div class="modal-cover-wrap"><img src="${rules.cover}" alt="${rules.title}" class="modal-cover" /></div>`
             : "";
 
-        // External Resources
+        // 1. External Resources
         const resourceLinks = [];
         if (rules.bggUrl) {
-            resourceLinks.push(`<a href="${rules.bggUrl}" target="_blank" rel="noopener noreferrer" class="resource-link bgg-link">🎲 BoardGameGeek</a>`);
+            resourceLinks.push(`<a href="${rules.bggUrl}" target="_blank" rel="noopener noreferrer" class="resource-link bgg-link">🎲 BoardGameGeek Entry</a>`);
         }
         if (rules.resources && Array.isArray(rules.resources)) {
             rules.resources.forEach((res) => {
@@ -112,16 +112,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const resourcesHtml = resourceLinks.length > 0
             ? `
-        <div class="rule-section">
-          <h4>🌐 External Resources</h4>
-          <div class="resources-container">
-            ${resourceLinks.join("")}
-          </div>
-        </div>
-      `
+                <div class="rule-section">
+                <h4>🌐 External Resources</h4>
+                <ol class="rule-list resource-list">
+                    ${resourceLinks.map((link) => `<li>${link}</li>`).join("")}
+                </ol>
+                </div>
+            `
             : "";
 
-        // Components section
+        // 2. Components section
         const componentsHtml = rules.components && rules.components.length > 0
             ? `
                 <div class="rule-section">
@@ -133,13 +133,13 @@ document.addEventListener("DOMContentLoaded", () => {
             `
             : "";
 
-        // Setup section: rendered as an ordered list of actions
+        // 3. Setup Section
         let setupHtml = "";
-        if (Array.isArray(rules.setup)) {
+        if (Array.isArray(rules.setup) && rules.setup.length > 0) {
             setupHtml = `
-                <div class="rule-section">
+                    <div class="rule-section">
                 <h4>⚙️ Setup Checklist</h4>
-                <ol class="setup-list">
+                <ol class="rule-list">
                     ${rules.setup.map((step) => `<li>${step}</li>`).join("")}
                 </ol>
                 </div>
@@ -147,39 +147,47 @@ document.addEventListener("DOMContentLoaded", () => {
         } else if (rules.setup) {
             setupHtml = `
                 <div class="rule-section">
-                <h4>⚙️ Setup Summary</h4>
+                <h4>⚙️ Setup Checklist</h4>
                 <p style="white-space: pre-line;">${rules.setup}</p>
                 </div>
             `;
         }
 
-        // Procedure section
+        // 4. Procedure Section
         const procedureSteps = rules.procedure || rules.turnOrder || [];
         const procedureHtml = procedureSteps.length > 0
             ? `
-        <div class="rule-section">
-          <h4>📋 Procedure</h4>
-          <ul class="turn-list">
-            ${procedureSteps.map((step) => `<li>${step}</li>`).join("")}
-          </ul>
-        </div>
-      `
+                <div class="rule-section">
+                <h4>📋 Procedure</h4>
+                <ol class="rule-list">
+                    ${procedureSteps.map((step) => `<li>${step}</li>`).join("")}
+                </ol>
+                </div>
+            `
             : "";
 
-        // End Game & Scoring section
+
+        // 5. End Game Section (Unified Ordered List)
         let endGameHtml = "";
-        if (Array.isArray(rules.endGame)) {
+        if (Array.isArray(rules.endGame) && rules.endGame.length > 0) {
             endGameHtml = `
-        <div class="rule-section">
-          <h4>🏁 End Game & Scoring</h4>
-          <ul class="endgame-list">
-            ${rules.endGame.map((point) => `<li>${point}</li>`).join("")}
-          </ul>
-        </div>
-      `;
+                <div class="rule-section">
+                <h4>🏁 End Game & Scoring</h4>
+                <ol class="rule-list">
+                    ${rules.endGame.map((point) => `<li>${point}</li>`).join("")}
+                </ol>
+                </div>
+            `;
+        } else if (rules.endGame) {
+            endGameHtml = `
+                <div class="rule-section">
+                <h4>🏁 End Game & Scoring</h4>
+                <p style="white-space: pre-line;">${rules.endGame}</p>
+                </div>
+            `;
         }
 
-        // Notes section
+        // 6. Notes section
         let notesHtml = "";
         if (Array.isArray(rules.notes) && rules.notes.length > 0) {
             notesHtml = `
@@ -190,23 +198,31 @@ document.addEventListener("DOMContentLoaded", () => {
                 </ul>
                 </div>
             `;
-        } 
+        } else if (rules.notes) {
+            notesHtml = `
+        <div class="notes-box">
+          <strong>📝 Notes:</strong><br>
+          <span style="white-space: pre-line;">${rules.notes}</span>
+        </div>
+      `;
+        }
 
+        // Assemble Modal
         modalContent.innerHTML = `
-      ${modalCoverHtml}
-      <h2>${rules.icon || "🎲"} ${rules.title}</h2>
-      <div class="modal-header-actions">
+        ${modalCoverHtml}
+        <h2>${rules.icon || "🎲"} ${rules.title}</h2>
+        <div class="modal-header-actions">
         <span class="card-meta">👥 ${rules.players} players | ⏱️ ${rules.playTime}</span>
         <button class="copy-btn" onclick="copyLink('${currentUrl}', this)">🔗 Copy Link</button>
-      </div>
+        </div>
 
-      ${resourcesHtml}
-      ${componentsHtml}
-      ${setupHtml}
-      ${procedureHtml}
-      ${endGameHtml}
-      ${notesHtml}
-    `;
+        ${resourcesHtml}
+        ${componentsHtml}
+        ${setupHtml}
+        ${procedureHtml}
+        ${endGameHtml}
+        ${notesHtml}
+        `;
     }
 
     // 6. Modal Controls & Routing
