@@ -3,7 +3,7 @@
       "id": "wingspan",
       "title": "Wingspan",
       "icon": "🪶",
-      "cover":  "https://cf.geekdo-images.com/yLZJCVLlIx4c7eJEWUNJ7w__imagepagezoom/img/yS4vL6iTCvHSvGySxyOjV_-R3dI=/fit-in/1200x900/filters:no_upscale():strip_icc()/pic4458123.jpg",
+      "cover":  "./games/wingspan/cover.jpg",
       "players": "1-5",
       "playTime": "40-70 min",
       "weight": "Medium",
