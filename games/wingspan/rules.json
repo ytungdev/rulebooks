@@ -2,7 +2,7 @@
     "id": "wingspan",
     "title": "Wingspan",
     "icon": "🪶",
-    "cover": "games/wingspan/cover.jpg",
+    "cover": "./games/wingspan/cover.jpg",
     "players": "1-5",
     "playTime": "40-70 min",
     "bggUrl": "https://boardgamegeek.com/boardgame/266192/wingspan",
