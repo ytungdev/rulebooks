@@ -3,7 +3,7 @@
       "id": "wingspan",
       "title": "Wingspan",
       "icon": "🪶",
-      "cover": "./games/wingspan/cover.jpg",
+      "cover":  "https://upload.wikimedia.org/wikipedia/en/1/14/Wingspan_board_game_box_cover.jpg",
       "players": "1-5",
       "playTime": "40-70 min",
       "weight": "Medium",
