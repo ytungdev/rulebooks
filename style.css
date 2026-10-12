@@ -163,13 +163,34 @@
   .turn-list { padding-left: 1.25rem; }
   .turn-list li { margin-bottom: 0.45rem; }
   
-  .pro-tip {
-    background: #fffbeb;
-    border-left: 4px solid #f59e0b;
-    padding: 0.75rem 1rem;
+  /* Notes Callout Box */
+  .notes-box {
+    background: #f8fafc;
+    border-left: 4px solid #3b82f6;
+    padding: 0.85rem 1rem;
     border-radius: 4px;
-    margin-top: 1rem;
+    margin-top: 1.25rem;
     font-size: 0.9rem;
+    color: #1e293b;
+  }
+  
+  .notes-box strong {
+    color: #0f172a;
+  }
+
+  /* Components Checklist Layout */
+  .components-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 0.4rem 1rem;
+    padding-left: 1.2rem;
+    margin-top: 0.4rem;
+    font-size: 0.9rem;
+    color: #334155;
+  }
+  
+  .components-grid li {
+    line-height: 1.4;
   }
   
   footer { text-align: center; padding: 2.5rem 0; color: var(--text-muted); font-size: 0.85rem; }

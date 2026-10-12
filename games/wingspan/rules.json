@@ -4,6 +4,21 @@
     "icon": "🪶",
     "players": "1-5",
     "playTime": "40-70 min",
+    "components": [
+        "170 Unique Bird cards",
+        "26 Bonus cards",
+        "5 Custom wooden food dice",
+        "1 Birdfeeder dice tower",
+        "5 Player mats",
+        "75 Miniature plastic eggs",
+        "40 Wooden action cubes (8 in each of 5 colors)",
+        "103 Food tokens (Invertebrate, Seed, Fish, Fruit, Rodent)",
+        "1 Bird tray (3-card display)",
+        "1 Double-sided End-of-Round Goal board",
+        "8 Goal tiles",
+        "1 First-player token",
+        "1 Scorepad"
+    ],
     "setup": "1. Each player receives a player mat, 8 action cubes of 1 color, 5 bird cards, 2 bonus cards, and 1 of each food token (5 total).\n2. Keep up to 5 bird cards; for every bird kept, discard 1 food token (cards kept + food kept must equal 5).\n3. Keep 1 bonus card and discard the other.\n4. Roll the 5 food dice into the birdfeeder.\n5. Deal 3 face-up bird cards into the bird tray.\n6. Place 4 random end-of-round goal tiles onto the goal board.",
     "turnOrder": [
       "Place 1 action cube on the leftmost exposed slot of one of the 4 rows on your mat:",
@@ -14,5 +29,5 @@
     ],
     "endGame": "Game ends after Round 4. Calculate total score across 6 categories:\n1. Printed Victory Points on played bird cards\n2. Completed Bonus cards\n3. End-of-round goal points\n4. 1 point per egg stored on birds\n5. 1 point per food token cached on birds\n6. 1 point per card tucked beneath birds",
     "tieBreaker": "The tied player with the most unused food tokens in their personal supply wins. If still tied, victory is shared.",
-    "proTips": "• Round length shrinks each round: R1 = 8 turns, R2 = 7 turns, R3 = 6 turns, R4 = 5 turns (because 1 cube is placed on the goal board each round).\n• Birdfeeder Reroll rule: You may only reroll all dice in the birdfeeder if all dice in the feeder show the same face, or if the feeder is completely empty."
+    "notes": "• Round length shrinks each round: R1 = 8 turns, R2 = 7 turns, R3 = 6 turns, R4 = 5 turns (because 1 cube is placed on the goal board each round).\n• Birdfeeder Reroll rule: You may only reroll all dice in the birdfeeder if all dice in the feeder show the same face, or if the feeder is completely empty."
   }

@@ -78,39 +78,64 @@ document.addEventListener("DOMContentLoaded", () => {
   
     // 5. Render Modal
     function renderModalContent(rules) {
-      const currentUrl = `${window.location.origin}${window.location.pathname}#${rules.id}`;
-  
-      modalContent.innerHTML = `
+        const currentUrl = `${window.location.origin}${window.location.pathname}#${rules.id}`;
+
+        // Components section
+        const componentsHtml = rules.components && rules.components.length > 0
+        ? `
+            <div class="rule-section">
+            <h4>📦 Components</h4>
+            <ul class="components-grid">
+                ${rules.components.map((item) => `<li>${item}</li>`).join("")}
+            </ul>
+            </div>
+        `
+        : "";
+
+        // Notes section (checks rules.notes or legacy rules.proTips)
+        const notesContent = rules.notes || rules.proTips;
+        const notesHtml = notesContent
+        ? `
+            <div class="notes-box">
+            <strong>📝 Notes:</strong><br>
+            <span style="white-space: pre-line;">${notesContent}</span>
+            </div>
+        `
+        : "";
+
+        modalContent.innerHTML = `
         <h2>${rules.icon || "🎲"} ${rules.title}</h2>
         <div class="modal-header-actions">
-          <span class="card-meta">👥 ${rules.players} players | ⏱️ ${rules.playTime}</span>
-          <button class="copy-btn" onclick="copyLink('${currentUrl}', this)">🔗 Copy Link</button>
+            <span class="card-meta">👥 ${rules.players} players | ⏱️ ${rules.playTime}</span>
+            <button class="copy-btn" onclick="copyLink('${currentUrl}', this)">🔗 Copy Link</button>
         </div>
-  
+
+        ${componentsHtml}
+
         <div class="rule-section">
-          <h4>Setup Summary</h4>
-          <p>${rules.setup}</p>
+            <h4>⚙️ Setup Summary</h4>
+            <p style="white-space: pre-line;">${rules.setup}</p>
         </div>
-  
+
         <div class="rule-section">
-          <h4>Turn Structure</h4>
-          <ul class="turn-list">
+            <h4>🔄 Turn Structure</h4>
+            <ul class="turn-list">
             ${rules.turnOrder.map((step) => `<li>${step}</li>`).join("")}
-          </ul>
+            </ul>
         </div>
-  
+
         <div class="rule-section">
-          <h4>End Game & Victory</h4>
-          <p>${rules.endGame}</p>
+            <h4>🏁 End Game & Scoring</h4>
+            <p style="white-space: pre-line;">${rules.endGame}</p>
         </div>
-  
+
         <div class="rule-section">
-          <h4>Tie Breaker</h4>
-          <p>${rules.tieBreaker}</p>
+            <h4>⚖️ Tie Breaker</h4>
+            <p>${rules.tieBreaker}</p>
         </div>
-  
-        ${rules.proTips ? `<div class="pro-tip"><strong>💡 Pro Tip:</strong> ${rules.proTips}</div>` : ""}
-      `;
+
+        ${notesHtml}
+        `;
     }
   
     // 6. Modal Controls & Routing
